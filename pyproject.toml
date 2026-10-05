@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refillclock"
+version = "0.1.0"
+description = "Demand forecasting and inventory simulation for chronic medicines"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "streamlit>=1.28.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+]
