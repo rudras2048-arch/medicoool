@@ -63,10 +63,12 @@ def activity_weight(overdue, sd):
 
 def window_prob(d, horizon, mu, sd):
     """P(next purchase falls in days [d, d+horizon) | no purchase yet), times activity weight."""
-    lo = norm_cdf((d - 0.5 - mu) / sd)
+    w = activity_weight(d - mu, sd)
+    surv = np.maximum(1.0 - norm_cdf((d - 0.5 - mu) / sd), 1e-5)
     hi = norm_cdf((d + horizon - 0.5 - mu) / sd)
-    p = (hi - lo) / np.maximum(1.0 - lo, 1e-6)
-    return np.clip(p, 0.0, 1.0) * activity_weight(d - mu, sd)
+    lo = norm_cdf((d - 0.5 - mu) / sd)
+    p = np.where(w > 0, np.clip((hi - lo) / surv, 0.0, 1.0) * w, 0.0)
+    return p
 
 
 # --------------------------------------------------------------------------- base
