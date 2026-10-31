@@ -1,4 +1,4 @@
-"""Unit and regression tests for the RefillCloack system."""
+"""Unit and regression tests for the refill system."""
 
 import numpy as np
 import pytest

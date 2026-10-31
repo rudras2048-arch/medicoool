@@ -1,4 +1,4 @@
-"""Evaluation suite and sensitivity sweeps for RefillCloack.
+"""Evaluation suite and sensitivity sweeps for refill.
 
 Provides functions to compute:
 1. Trade-off curves: Fill rate vs. Inventory value across service levels
@@ -333,7 +333,7 @@ def run_full_evaluation(output_dir: str = "artifacts") -> dict:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Evaluate RefillCloack forecasting against baselines")
+    parser = argparse.ArgumentParser(description="Evaluate refill forecasting against baselines")
     parser.add_argument("--output-dir", default="artifacts", help="Directory to save evaluation artifacts")
     args = parser.parse_args()
     run_full_evaluation(args.output_dir)
