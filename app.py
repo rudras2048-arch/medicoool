@@ -1,4 +1,4 @@
-"""RefillClock | Modern Chronic Medicine Predictive Inventory OS.
+"""RefillCloack | Modern Chronic Medicine Predictive Inventory OS.
 
 A world-class, silky-smooth web application:
 - Linear / Vercel-tier design system with Tailwind CSS & Lucide Icons
@@ -10,7 +10,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 st.set_page_config(
-    page_title="RefillClock — Pharmacy Inventory OS",
+    page_title="RefillCloack — Pharmacy Inventory OS",
     page_icon="⏱️",
     layout="wide",
     initial_sidebar_state="collapsed",
