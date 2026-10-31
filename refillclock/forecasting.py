@@ -241,4 +241,6 @@ POLICIES = {
 }
 
 
+RePolicy = RefillClockPolicy
+rePolicy = RefillClockPolicy
 RefillCloackPolicy = RefillClockPolicy

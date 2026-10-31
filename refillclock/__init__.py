@@ -1,4 +1,4 @@
-"""RefillCloack: Demand forecasting and inventory simulation for chronic medicines."""
+"""re: Demand forecasting and inventory simulation for chronic medicines."""
 
 from .generator import Scenario, ScenarioConfig, generate, generate_cached
 from .forecasting import (
@@ -6,6 +6,8 @@ from .forecasting import (
     Policy,
     RefillClockPolicy,
     RefillCloackPolicy,
+    RePolicy,
+    rePolicy,
     CrostonPolicy,
     MovingAveragePolicy,
     MinMaxPolicy,
@@ -22,6 +24,8 @@ __all__ = [
     "Policy",
     "RefillClockPolicy",
     "RefillCloackPolicy",
+    "RePolicy",
+    "rePolicy",
     "CrostonPolicy",
     "MovingAveragePolicy",
     "MinMaxPolicy",
