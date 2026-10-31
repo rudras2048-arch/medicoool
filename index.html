@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RefillClock · Sharma Medical</title>
+<title>RefillCloack · Sharma Medical</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +64,7 @@ tailwind.config = { theme: { extend: {
 
 <!-- outer caption, like the reference -->
 <div class="max-w-[1380px] mx-auto flex items-center justify-between text-[13px] tracking-wide text-ink/70 mb-4 px-2">
-  <span class="uppercase">RefillClock</span>
+  <span class="uppercase">RefillCloack</span>
   <span>Forecast the people, not the curve.</span>
 </div>
 
@@ -502,10 +502,10 @@ function viewCounter() {
       <div id="clist" class="mt-3 flex-1 overflow-y-auto scroll pr-2 space-y-2">${counterList(res)}</div>
     </div>
     <div class="w-[380px] shrink-0 flex flex-col gap-4 pt-[88px]">
-      <div id="counterCard" class="glass rounded-[32px] p-6">${sel ? counterCard(sel) : '<div class="text-ink/60 text-sm">No one matches. Walk-in customer? Sell normally — RefillClock only tracks regulars who agree to be remembered.</div>'}</div>
+      <div id="counterCard" class="glass rounded-[32px] p-6">${sel ? counterCard(sel) : '<div class="text-ink/60 text-sm">No one matches. Walk-in customer? Sell normally — RefillCloack only tracks regulars who agree to be remembered.</div>'}</div>
       <div class="solid rounded-[28px] p-5 text-[13px] text-ink/70 leading-relaxed">
         <div class="font-medium text-ink mb-1">How this works</div>
-        When you hand over a strip, that person's clock resets. RefillClock learns their real rhythm from every visit — no forms, no app for the patient.
+        When you hand over a strip, that person's clock resets. RefillCloack learns their real rhythm from every visit — no forms, no app for the patient.
       </div>
     </div>
   </div>`;
@@ -559,7 +559,7 @@ function renderCounterList() {
   S.cursor = Math.min(S.cursor, Math.max(0, res.length - 1));
   document.getElementById('clist').innerHTML = counterList(res);
   const c = document.getElementById('counterCard');
-  c.innerHTML = res[S.cursor] ? counterCard(res[S.cursor]) : '<div class="text-ink/60 text-sm">No one matches. Walk-in customer? Sell normally — RefillClock only tracks regulars who agree to be remembered.</div>';
+  c.innerHTML = res[S.cursor] ? counterCard(res[S.cursor]) : '<div class="text-ink/60 text-sm">No one matches. Walk-in customer? Sell normally — RefillCloack only tracks regulars who agree to be remembered.</div>';
   lucide.createIcons();
   document.querySelectorAll('#clist > button')[S.cursor]?.scrollIntoView({block:'nearest'});
 }
@@ -680,7 +680,7 @@ function uncontact(id) { S.contacted.delete(id); persist(); render(); }
 function viewProof() {
   return `<div class="view absolute inset-0 pt-[104px] pl-[92px] pr-8 pb-8 flex flex-col">
     <div class="display text-[64px] mb-2">Why it works</div>
-    <div class="text-white/90 text-[15px] mb-5 max-w-[760px]">Chronic demand isn't a curve — it's a small group of known people on biological refill clocks. When nobody is identifiable, RefillClock falls back to Croston exactly, so it's never worse than the standard method.</div>
+    <div class="text-white/90 text-[15px] mb-5 max-w-[760px]">Chronic demand isn't a curve — it's a small group of known people on biological refill clocks. When nobody is identifiable, RefillCloack falls back to Croston exactly, so it's never worse than the standard method.</div>
     <div class="grid grid-cols-3 gap-4 mb-4">
       <div class="solid rounded-[28px] p-5"><div class="text-[32px] font-medium leading-none">90.2%</div><div class="text-[12px] text-ink/60 mt-2">fill rate at ₹23.8k stock (Croston: 89.0% at ₹25.8k)</div></div>
       <div class="solid rounded-[28px] p-5"><div class="text-[32px] font-medium leading-none">7.05 days</div><div class="text-[12px] text-ink/60 mt-2">earlier lapse detection vs a 45-day rule, 27% fewer false alarms</div></div>

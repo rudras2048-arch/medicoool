@@ -239,3 +239,6 @@ POLICIES = {
     "Croston (SBA)": CrostonPolicy,
     "Refill clock": RefillClockPolicy,
 }
+
+
+RefillCloackPolicy = RefillClockPolicy
