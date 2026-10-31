@@ -89,3 +89,13 @@ Simulates pharmacy refill cycles and inventory depletion over a time horizon.
 | `policy` | Reordering policy (Croston or RefillClock) |
 | `lead_time` | Distributor delivery lead time in days |
 | `timeout_secs` | Obsolete connection timeout parameter |
+
+
+### `get_substitutes()`
+
+Retrieves verified alternative brands for a given drug salt.
+
+| Parameter | Description |
+| :--- | :--- |
+| `salt_name` | Name of the salt molecule |
+| `max_results` | Maximum substitute options to return |
