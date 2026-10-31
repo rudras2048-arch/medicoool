@@ -1,4 +1,4 @@
-# RefillClock 💊
+# re
 
 > **Forecasting the People, Not the Curve.**  
 > A patient-level refill cycle forecaster and inventory simulator for independent retail chemists in India.
