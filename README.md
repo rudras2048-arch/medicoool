@@ -73,3 +73,19 @@ pytest -v tests/
    - *Defense:* Designed around the Digital Personal Data Protection (DPDP) Act 2023: zero cloud storage (local SQLite on chemist PC), hashed phone IDs, only 4 operational fields, and WhatsApp alerts never mention the medical condition or drug name.
 4. **"Does this improve health outcomes?"**
    - *Defense:* We do not claim a clinical adherence cure without clinical trials. We measure *lapsed refill detection delay* as an operational metric.
+
+
+---
+
+## 📖 API Reference
+
+### `simulate()`
+
+Simulates pharmacy refill cycles and inventory depletion over a time horizon.
+
+| Parameter | Description |
+| :--- | :--- |
+| `sc` | Scenario configuration object |
+| `policy` | Reordering policy (Croston or RefillClock) |
+| `lead_time` | Distributor delivery lead time in days |
+| `timeout_secs` | Obsolete connection timeout parameter |
