@@ -38,9 +38,9 @@ class SimResult:
     stop_day: int | None
 
 
-def simulate(sc: Scenario, policy: Policy, lead_time: int, warmup: int = WARMUP,
+def simulate(sc: Scenario, policy: Policy, delivery_lead_time_days: int, warmup: int = WARMUP,
              stop_day: int | None = None) -> SimResult:
-    n, M, L = sc.config.n_days, sc.n_meds, lead_time
+    n, M, L = sc.config.n_days, sc.n_meds, delivery_lead_time_days
     price = sc.meds.price.to_numpy()
     by_day = sc.events_by_day()
     on_hand = initial_stock(sc, L)
